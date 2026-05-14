@@ -1,0 +1,24 @@
+name: MarisTeam
+version: '1.0'
+main: com.maris7.team.MarisTeam
+api-version: '1.21'
+folia-supported: true
+softdepend: [PlaceholderAPI, Vault, MarisSettings]
+loadbefore: [MarisChat]
+author: Maris7
+libraries:
+  - com.zaxxer:HikariCP:7.0.2
+  - org.xerial:sqlite-jdbc:3.53.0.0
+  - com.mysql:mysql-connector-j:9.7.0
+commands:
+  team:
+    description: Team command.
+    usage: /team <create|join|chat|home|sethome|delhome|leave|invite|kick|disband>
+    aliases: [teams, clan, clans]
+  teamadmin:
+    description: MarisTeam admin command.
+    usage: /teamadmin <delete|reload>
+    permission: maristeam.admin
+permissions:
+  maristeam.admin:
+    default: op

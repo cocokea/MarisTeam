@@ -1,0 +1,60 @@
+title: "&8ᴛᴇᴀᴍ (Page %pages%)"
+rows: 6
+items:
+  invite:
+    material: GRAY_STAINED_GLASS_PANE
+    name: "&#00FF8Cɪɴᴠɪᴛᴇ"
+    lore:
+      - "&fClick to invite a new player"
+  online-member:
+    name: "&#00FF8C■ %player%"
+    lore:
+      - "&fClick to edit"
+  offline-member:
+    name: "&#FF4040■ %player%"
+    lore:
+      - "&fClick to edit"
+  search:
+    slot: 45
+    material: OAK_SIGN
+    name: "&#00FF8Cꜱᴇᴀʀᴄʜ"
+    lore:
+      - "&fClick to search"
+  sort:
+    slot: 46
+    material: HOPPER
+    name: "&#00FF8Cꜱᴏʀᴛ"
+    lore:
+      - "&fClick to change sorting"
+    selected-format: "&#00FF8C• %name%"
+    normal-format: "&f• %name%"
+  back:
+    slot: 48
+    material: ARROW
+    name: "&#00FF8Cʙᴀᴄᴋ"
+    lore:
+      - "&fClick to go to the previous page"
+  info:
+    slot: 49
+    material: IRON_HELMET
+    name: "&#00FF8Cᴛᴇᴀᴍ %team%"
+    lore:
+      - "&fClick to refresh"
+  next:
+    slot: 50
+    material: ARROW
+    name: "&#00FF8Cɴᴇxᴛ"
+    lore:
+      - "&fClick to go to the next page"
+  home:
+    slot: 52
+    material: WHITE_BANNER
+    name: "&#00FF8Cᴛᴇᴀᴍ ʜᴏᴍᴇ"
+    lore:
+      - "&fClick to teleport to team home"
+  pvp:
+    slot: 53
+    material: IRON_SWORD
+    name: "&#00FF8Cᴛᴇᴀᴍ ᴘᴠᴘ"
+    lore:
+      - "&7Current: %toggle%"

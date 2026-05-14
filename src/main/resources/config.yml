@@ -1,0 +1,13 @@
+language: en
+database:
+  type: sqlite # sqlite or mysql
+  mysql:
+    host: localhost
+    port: 3306
+    database: maristeam
+    username: root
+    password: ''
+    pool-size: 8
+blacklist-worlds:
+  - disabled_world
+invite-expire-seconds: 60

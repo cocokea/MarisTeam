@@ -1,0 +1,15 @@
+leave-title: "&8ᴄᴏɴꜰɪʀᴍ ʟᴇᴀᴠᴇ"
+disband-title: "&8ᴄᴏɴꜰɪʀᴍ ᴅɪꜱʙᴀɴᴅ"
+rows: 3
+cancel:
+  slot: 11
+  material: RED_STAINED_GLASS_PANE
+  name: "&#FF0000ᴄᴀɴᴄᴇʟ"
+  lore:
+    - "&fClick to return"
+confirm:
+  slot: 15
+  material: LIME_STAINED_GLASS_PANE
+  name: "&aᴄᴏɴꜰɪʀᴍ"
+  lore:
+    - "&fClick to confirm"

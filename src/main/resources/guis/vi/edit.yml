@@ -1,0 +1,44 @@
+title: "&8ᴇᴅɪᴛ %player%"
+rows: 3
+items:
+  edit-home:
+    slot: 10
+    material: WHITE_BANNER
+    name: "&#00FF8Cᴇᴅɪᴛ ʜᴏᴍᴇ"
+    lore:
+      - "&fLet %player% set and remove team home"
+      - "&7Current: %toggle%"
+  kick:
+    slot: 11
+    material: OAK_DOOR
+    name: "&#FF4040ᴋɪᴄᴋ"
+    lore:
+      - "&fClick to kick %player%"
+  manage:
+    slot: 12
+    material: IRON_HELMET
+    name: "&#00FF8Cᴍᴀɴᴀɢᴇ ᴛᴇᴀᴍᴍᴀᴛᴇꜱ"
+    lore:
+      - "&fLet %player% invite and kick teammates"
+      - "&7Current: %toggle%"
+  pvp:
+    slot: 13
+    material: IRON_SWORD
+    name: "&#00FF8Cᴘᴠᴘ"
+    lore:
+      - "&fLet %player% toggle team PvP"
+      - "&7Current: %toggle%"
+  visit-home:
+    slot: 14
+    material: ENDER_PEARL
+    name: "&#00FF8Cᴠɪꜱɪᴛ ᴛᴇᴀᴍ ʜᴏᴍᴇ"
+    lore:
+      - "&fLet %player% teleport to team home"
+      - "&7Current: %toggle%"
+  team-chat:
+    slot: 15
+    material: FEATHER
+    name: "&#00FF8Cᴛᴇᴀᴍ ᴄʜᴀᴛ"
+    lore:
+      - "&fLet %player% use team chat"
+      - "&7Current: %toggle%"
