@@ -38,3 +38,14 @@ home-teleport-done: '&7Bạn đã dịch chuyển về nhà của team.'
 home-teleport-countdown: '&7Dịch chuyển sau &#FFD900%seconds%s'
 
 home-teleport-cancelled: '&cDịch chuyển bị hủy vì bạn đã di chuyển'
+sign:
+  search:
+    - ""
+    - "^^^^^^^^^^^^"
+    - "Search"
+    - ""
+  ignored-lines:
+    - ""
+    - "^^^^^^^^^^^^"
+    - "Search"
+    - ""

@@ -38,3 +38,14 @@ home-teleport-done: '&7You have moved back to team home.'
 home-teleport-countdown: '&7Teleporting in &#FFD900%seconds%s'
 
 home-teleport-cancelled: '&cTeleport cancelled because you moved'
+sign:
+  search:
+    - ""
+    - "^^^^^^^^^^^^"
+    - "Search"
+    - ""
+  ignored-lines:
+    - ""
+    - "^^^^^^^^^^^^"
+    - "Search"
+    - ""

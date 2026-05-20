@@ -1,5 +1,6 @@
 package com.maris7.team;
 
+import com.github.retrooper.packetevents.PacketEvents;
 import com.maris7.team.command.TeamAdminCommand;
 import com.maris7.team.command.TeamCommand;
 import com.maris7.team.config.Configs;
@@ -11,6 +12,7 @@ import com.maris7.team.listener.LegacyChatListener;
 import com.maris7.team.listener.PaperChatBridge;
 import com.maris7.team.listener.PlayerListener;
 import com.maris7.team.listener.PvpListener;
+import com.maris7.team.listener.SignInputPacketListener;
 import com.maris7.team.service.SignInputService;
 import com.maris7.team.service.HomeTeleportService;
 import com.maris7.team.service.TeamService;
@@ -29,6 +31,7 @@ public final class MarisTeam extends JavaPlugin {
     private SettingsHook settingsHook;
     private MarisPlaceholders placeholders;
     private volatile boolean shuttingDown;
+    private SignInputPacketListener signInputPacketListener;
 
     public static MarisTeam get() { return instance; }
     public Configs configs() { return configs; }
@@ -41,7 +44,10 @@ public final class MarisTeam extends JavaPlugin {
     public boolean isShuttingDown() { return shuttingDown; }
 
     @Override public void onEnable() {
-        instance = this;
+        
+        saveDefaultConfig();
+        MarisPluginStartup.bootstrap(this, "cocokea/MarisTeam");
+instance = this;
         shuttingDown = false;
         saveDefaultConfig();
         saveResourceIfMissing("sounds.yml");
@@ -60,6 +66,12 @@ public final class MarisTeam extends JavaPlugin {
         database.init();
         teamService = new TeamService(this, database);
         signInputService = new SignInputService(this);
+        if (signInputService.isPacketEventsAvailable()) {
+            signInputPacketListener = new SignInputPacketListener(signInputService);
+            PacketEvents.getAPI().getEventManager().registerListener(signInputPacketListener);
+        } else {
+            getLogger().warning("PacketEvents was not found. Sign input features will stay disabled until PacketEvents is installed.");
+        }
         homeTeleportService = new HomeTeleportService(this);
         TeamCommand teamCommand = new TeamCommand(this);
         getCommand("team").setExecutor(teamCommand); getCommand("team").setTabCompleter(teamCommand);
@@ -88,6 +100,10 @@ public final class MarisTeam extends JavaPlugin {
             placeholders = null;
         }
         if (signInputService != null) signInputService.clearAll();
+        if (signInputPacketListener != null && PacketEvents.getAPI() != null) {
+            PacketEvents.getAPI().getEventManager().unregisterListener(signInputPacketListener);
+            signInputPacketListener = null;
+        }
         if (database != null) database.close();
     }
 
@@ -146,4 +162,3 @@ public final class MarisTeam extends JavaPlugin {
 
 
 }
-
